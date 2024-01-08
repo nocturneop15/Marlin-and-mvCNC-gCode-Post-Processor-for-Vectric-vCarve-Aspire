@@ -26,6 +26,9 @@
 |                      Comments now report carved Z depth, not material Z
 | EdwardW   1/22/2022
 |                      Minor tweaks and comment updates
+|
+| Nocturne.op.15 2024/01%08
+|                      Added manual toolchange (SKR v.1.2, MPCNC)  
 +===========================================================================
 
 POST_NAME = "Marlin w/G54 M3 (mm) (*.gcode)"
@@ -194,6 +197,20 @@ begin NEW_SEGMENT
 begin DWELL_MOVE
 
 "G4 [DWELL]"
+
++---------------------------------------------------------------------------
+|  Toolchange (manual)
++---------------------------------------------------------------------------
+begin TOOLCHANGE
+
+"M05"
+"G01 X0 Y0 Z50"
+"M18 Z"
+"M117 Load [TOOLNAME]"
+"M0 Load [TOOLNAME]"
+"G92 Z0"
+"M17"
+"M3 [S]"
 
 +---------------------------------------------------------------------------
 |  End of file output
