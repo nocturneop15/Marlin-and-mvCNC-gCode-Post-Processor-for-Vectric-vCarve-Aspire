@@ -145,9 +145,9 @@ begin FEED_MOVE
 +---------------------------------------------------------------------------
 |  Plunging move - Only enable if necessary. Can cause huge slowdowns
 +---------------------------------------------------------------------------
-+begin PLUNGE_MOVE
+begin PLUNGE_MOVE
 
-+"G1 [X][Y][Z] [FP]"
+"G1 [X][Y][Z] [FP]"
 
 +---------------------------------------------------------------------------
 |  Clockwise arc move
